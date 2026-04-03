@@ -31,6 +31,14 @@ El portfolio está organizado por verticales de negocio, cada una con su propia 
 * **Desafío:** Manejo de valores faltantes en propiedades de alto valor y fragmentación de datos de ubicación.
 * **Resultado:** Base de datos depurada para valuación de mercado y análisis de inversión.
 
+### 🚀 Novedad: Automatización de Pipelines (ETL) con Python
+Este repositorio ha sido actualizado para incluir scripts de limpieza automatizada utilizando **Python y la librería Pandas**. 
+Dentro de cada proyecto, encontrarás un cuaderno (`.ipynb`) que reemplaza los procesos manuales por un flujo de trabajo programático, demostrando capacidad para:
+* Manipulación y estandarización de Strings (`.str.replace`, `.split`, Regex).
+* Estandarización de Series Temporales (ISO 8601).
+* Tratamiento de Valores Nulos (NaN) e Imputación de datos.
+* Casting de tipos de datos y cálculos lógicos condicionales.
+
 ---
 
 ## 📈 Metodología de Trabajo: "Medallion Architecture"
@@ -45,4 +53,3 @@ En cada proyecto se respetó el flujo de datos profesional:
 
 ## 👤 Contacto
 **Estudiante de Data Analysis** enfocado en la automatización de procesos y creación de valor a través del dato.
-* **Meta 2026:** Transición completa hacia flujos de trabajo automatizados con **Python** y **dbt**.

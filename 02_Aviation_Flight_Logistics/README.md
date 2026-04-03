@@ -37,6 +37,16 @@ El dataset optimizado (`Airline Dataset Updated - v2 limpio.csv`) funciona como 
 2. **Optimización de Rutas:** Identificación de corredores aéreos con mayor volumen de incidencias.
 3. **Métricas de Pasajeros:** Segmentación demográfica precisa para estrategias de marketing y lealtad sin sesgos por duplicados.
 
+
+
+## 5. Automatización del Pipeline (Python / Pandas)
+El procesamiento manual se migró a un entorno de código mediante un script de Python (`02_Automated_Cleaning_Airlines.ipynb`), garantizando la repetibilidad del proceso ante nuevas cargas de datos mensuales.
+
+**Técnicas de Ingeniería Aplicadas:**
+* **Parsing Temporal Avanzado:** Uso de `pd.to_datetime()` y `.dt.strftime()` para forzar la estandarización de fechas caóticas al formato corporativo ISO 8601 (`YYYY-MM-DD`).
+* **Deduplicación Estricta:** Implementación de `.drop_duplicates(subset=['Passenger ID'])` para auditar y eliminar registros clonados que sesgaban el volumen de tráfico.
+* **Normalización de Strings:** Aplicación de métodos en cadena (`.str.strip().str.upper()`) para limpiar espacios ocultos y estandarizar códigos IATA, asegurando la integridad referencial para futuros cruces de tablas (Joins).
+
 ---
 
 ### Tecnologías Aplicadas

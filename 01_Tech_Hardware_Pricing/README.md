@@ -41,6 +41,17 @@ El dataset final (`laptopData limpio .csv`) habilita inmediatamente:
 2. **Modelos de Elasticidad de Precio:** Evaluar cuánto incrementa el precio por cada GB o GHz adicional de forma precisa.
 3. **Optimización de Stock:** Clasificación clara por tipo de formato (Ultrabook, Notebook, etc.) y tecnología de disco (SSD vs HDD).
 
+
+
+## 5. Automatización del Pipeline (Python / Pandas)
+Para escalar esta solución y abandonar el procesamiento manual en hojas de cálculo, se desarrolló un script de automatización en Python (`01_Automated_Cleaning_Laptops.ipynb`). 
+
+**Técnicas de Ingeniería Aplicadas:**
+* **Extracción Regex:** Uso de `.str.extract('(\d+)')` para aislar valores numéricos de cadenas de texto complejas (ej. transformar "128GB SSD" a `128.0`).
+* **Lógica Condicional Vectorizada:** Implementación de `.loc[]` para detectar discos en Terabytes y multiplicar su valor por 1000 dinámicamente.
+* **Manejo de Nulos en Cálculos:** Uso de `.fillna(0)` durante la suma de capacidades de almacenamiento para evitar la propagación de valores `NaN` en laptops con un solo disco.
+* **Casting de Datos:** Conversión de tipos `object` a `float` e `int` para habilitar operaciones matemáticas.
+
 ---
 
 ### Tecnologías Aplicadas

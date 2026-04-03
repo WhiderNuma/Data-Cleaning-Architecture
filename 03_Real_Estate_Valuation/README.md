@@ -38,6 +38,16 @@ El dataset final (`Nashville Housing limpio.csv`) es un activo listo para:
 2. **Segmentación de Inversores:** Identificación de patrones de compra según el estado de procedencia de los propietarios.
 3. **Modelado Predictivo:** Datos listos para entrenar algoritmos que predigan el `TotalValue` en función de variables como `Bedrooms`, `FullBath` y `Acreage`.
 
+
+
+## 5. Automatización del Pipeline (Python / Pandas)
+La transformación de este dataset inmobiliario se automatizó mediante un script de Python (`03_Automated_Cleaning_Nashville.ipynb`), vital para procesar grandes volúmenes de transacciones sin intervención manual.
+
+**Técnicas de Ingeniería Aplicadas:**
+* **Imputación de Valores Faltantes:** Uso de `.fillna('Sin Datos')` en la columna `OwnerName` para salvar miles de registros críticos de ser descartados en el análisis financiero.
+* **Parsing de Direcciones (Data Splitting):** Aplicación de `.str.split(',', expand=True)` para aislar lógicamente la calle de la ciudad y habilitar la geocodificación.
+* **Mapeo Categórico:** Utilización de diccionarios con `.replace({'Y': 'Yes', 'N': 'No'})` para unificar variables booleanas inconsistentes en un estándar binario limpio.
+
 ---
 
 ### Tecnologías Aplicadas
